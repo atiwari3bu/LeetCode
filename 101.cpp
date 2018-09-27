@@ -103,6 +103,7 @@ string boolToString(bool input) {
     return input ? "True" : "False";
 }
 
+
 int main() {
     string line;
     while (getline(cin, line)) {

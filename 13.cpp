@@ -60,6 +60,7 @@ string stringToString(string input) {
     return result;
 }
 
+
 int main() {
     string line;
     while (getline(cin, line)) {
