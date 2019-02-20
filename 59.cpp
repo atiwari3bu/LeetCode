@@ -1,4 +1,5 @@
 class Solution {
+  
   public:
     enum status{ r,d,l,u,nogo};
 
