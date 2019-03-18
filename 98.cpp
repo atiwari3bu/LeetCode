@@ -27,4 +27,17 @@ public:
         
         return true;
     }
+
+    /* O(1) space complexity */
+		bool helper(TreeNode* n,int& min,int& max){
+        if(n==nullptr) return true;
+        if(max!=-10000 && n->val>= max || min!=-10000 && n->val<=min) return false;
+        return (helper(n->left,min,n->val) && helper(n->right,n->val,max));
+    }
+    
+    bool isValidBST(TreeNode* root) {
+        int min=-10000;
+        int max=-10000;
+        return helper(root,min,max);    
+    }
 };
